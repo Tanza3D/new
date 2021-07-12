@@ -5,3 +5,5 @@ its very possible the design of this changes, but right now the idea is to conve
 loading times are high priority here.
 
 this is old code, and will be changed
+
+deisgn: https://www.figma.com/file/8ISiR7xCEVgQxFgpESYUWB/
