@@ -1,111 +1,52 @@
-<!DOCTYPE html>
 <html>
 
-<?php include('generic.php'); 
-include('database.php'); 
-$pagename = "home";
-
-
-$sql = $mysqli_conection->query("SELECT * FROM posts ORDER BY date DESC LIMIT 1");
-
-while ($mp = $sql->fetch_assoc()) {
-    $ea = $mp;
-}
-
-?>
-
-<style>
-.posts-img{
-    background-image: url(<?php echo $ea['img_link']; ?>);
-}
-</style>
-
 <head>
-    <!-- Primary Meta Tags -->
-    <title>Hubz - Developer & Designer</title>
-    <meta name="title" content="Hubz - Developer & Designer">
-    <meta name="description"
-        content="I'm a website & game developer, designer, and just generally a cool guy (atleast I think so) - Check out my projects, portfolio, and contact me for work and more!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" type="image/svg+xml" href="./gate-logo-white.svg">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hubza.co.uk/">
-    <meta property="og:title" content="Hubz - Developer & Designer">
-    <meta property="og:description"
-        content="I'm a website & game developer, designer, and just generally a cool guy (atleast I think so) - Check out my projects, portfolio, and contact me for work and more!">
-    <meta property="og:image" content="https://upload.hubza.co.uk/i/A1-WALLPAPER.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hubza.co.uk/">
-    <meta property="twitter:title" content="Hubz - Developer & Designer">
-    <meta property="twitter:description"
-        content="I'm a website & game developer, designer, and just generally a cool guy (atleast I think so) - Check out my projects, portfolio, and contact me for work and more!">
-    <meta property="twitter:image" content="https://upload.hubza.co.uk/i/A1-WALLPAPER.png">
-    <title>Hubz</title>
-    <?php genericmeta(); ?>
-    <link rel="stylesheet" href="<?php echo $pagename; ?>.css" />
-    <?php css(); ?>
-    <?php font(); ?>
-    <?php fa(); ?>
 </head>
 
-<body>
-    <div class="page-cont">
-        <?php navbar($pagename); ?>
-        <div class="maincontent">
-            <div class="mc-left">
-                <div class="mc-link">
-                    <a class="mc-link-anchor" href="projects">
-                        <div class="mc-link-main">
-                            <p class="mclm-top">Projects</p>
-                        </div>
-                    </a>
-                    <div class="mc-link-desc">
-                        <p class="mcld-text">Projects I've worked on, such as games, websites, and more
-                        <p>
-                    </div>
-                </div>
-                <div class="mc-link">
-                    <a class="mc-link-anchor" href="portfolio">
-                        <div class="mc-link-main">
-                            <p class="mclm-top">Portfolio</p>
-                        </div>
-                    </a>
-                    <div class="mc-link-desc">
-                        <p class="mcld-text">All the artwork I've done, sorted from latest to oldest
-                        <p>
-                    </div>
-                </div>
-                <div class="mc-link">
-                    <a class="mc-link-anchor" href="contact">
-                        <div class="mc-link-main">
-                            <p class="mclm-top">Contact / Work</p>
-                        </div>
-                    </a>
-                    <div class="mc-link-desc mcld-last">
-                        <p class="mcld-text">Need to contact me, or want some work done? Hit me up!
-                        <p>
-                    </div>
-                </div>
+<body id="body">
+    <div class="background" id="background"></div>
+    <div class="page" id="home">
+        <div class="page_content">
+            <div class="home__header">
+                <img src="./gate-logo-white.svg" alt="HUBZ" class="home__logo">
+                <h1>Hey, I'm Hubz!</h1>
+                <p>I develop and design games, apps, and websites, produce music, create 3d art, and more!</p>
             </div>
-
-            <div class="mc-right">
-                <div class="posts-header">
-                    Latest Portfolio Post
-                </div>
-                <div class="posts-img">
-                    <div class="posts-name">
-                    <?php echo $ea['name']; ?>
+            <div class="home__2col">
+                <div class="home__2col__left">
+                    <div class="home__button-section">
+                        <a class="home__button"><p>Projects</p></a>
+                        <p class="home__button-text">Projects I've worked on, such as games, websites, and more</p>
                     </div>
-                    <div class="posts-viewmore">
-                        View More
+                    <div class="home__button-section">
+                        <a class="home__button"><p>Portfolio</p></a>
+                        <p class="home__button-text">All the artwork I've done, sorted from latest to oldest</p>
+                    </div>
+                    <div class="home__button-section">
+                        <a class="home__button"><p>Contact / Work</p></a>
+                        <p class="home__button-text">Need to contact me, or want some work done? Hit me up!</p>
+                    </div>
+                </div>
+                <div class="home__2col__right">
+                    <div class="home__latest-portfolio">
+                        <div class="home__latest-portfolio-header">
+                            <p>Featured portfolio post</p>
+                        </div>
+                        <a class="home__lastest-portfolio-readmore">
+                            Read More
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <?php footer(); ?>
     </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>
