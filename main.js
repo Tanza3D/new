@@ -37,3 +37,20 @@ setTimeout(() => {
     checkGo();
 }, 10);
 
+
+
+function showUserCard() {
+    var uc = document.getElementById("usercard");
+    if(uc.classList.contains("usercard_container-hidden")) {
+        uc.classList.remove("usercard_container-hidden");
+    } else {
+        uc.classList.add("usercard_container-hidden");
+    }
+}
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        showUserCard();
+    }
+};
