@@ -193,7 +193,7 @@ body {
     z-index: 3;
     pointer-events: none;
     animation: hover_anim 1.5s cubic-bezier(0.140, 0.050, 0.105, 0.990);
-    transition: all 0.1s ease;
+   /*  transition: all 0.1s ease; */
 }
 
 .home__button:active::before {
@@ -580,4 +580,218 @@ body {
     font-size: 19px;
     font-weight: 400;
     color: #fffe;
+}
+
+.projects__board {
+    /* this has to be a grid of 3 wide items. though some can take up 100% width */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+
+.projects__board-item__big {
+    /* this should take up two slots, either on the left or right */
+    /* grid-column: 1 / 3; (doesnt work because if it's placed on the right, it will take up the whole row) */
+    grid-column: span 2;
+}
+
+.projects__board-item__bigger {
+    /* this takes up the entire 3 column space */
+    grid-column: 1 / -1;
+}
+
+.projects__board-item {
+    padding: 14px;
+    background-color: #fff2;
+    height: 180px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease;
+}
+.projects__board-item:hover {
+    filter: drop-shadow(0px 0px 10px #fffa) brightness(1.1);
+    transform: scale(1.01);
+}
+
+.projects__board-item-title h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.projects__board-item-title h4 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.project__post-cover {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.project__post-cover  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.project__post-cover p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.project__page {
+    /* includes html from the project */
+    text-align: left;
+    margin-top: 20px;
+    background-color: #ffffff05;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    width: 100%;
+}
+
+.project__page p {
+
+    font-size: 18px;
+}
+
+.project__page a {
+    color: #0088ee;
+}
+
+.project__page a:visited {
+    color: #8888ee;
+}
+
+.contact__header {
+    background-color: #fff2;
+    border: 1px solid #fff2;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    text-align: left;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff05;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    margin-top: 10px;
+}
+
+.content-item div img {
+    height: 20px;
+    filter: brightness(900) contrast(0) grayscale(1) brightness(900);
+    opacity: 0.5;
+}
+
+.content-item div p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.content-item div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.contact-button {
+    border: 2px solid #fffa;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+.contact__footer {
+
+}
+
+
+.contact__footer-links {
+    color: white !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact__footer-links a {
+    color: white !important;
+    background-color: #fff2;
+    border-radius: 8px;
+    border: 1px solid #fff2;
+    padding: 6px;
+    height: 24px !important;
+    width: 24px !important;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact__footer-links a:hover {
+    background-color: #fff;
+    color: #222 !important;
+}
+
+.contact__footer {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.contact__footer p {
+    padding-bottom: 8px;
 }

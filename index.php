@@ -18,6 +18,8 @@
     <div class="background" id="background"></div>
     <?php
     include("home.php");
+    include("projects.php");
+    include("contact.php");
     include("portfolio.php");
     ?>
     <script src="./main.js"></script>

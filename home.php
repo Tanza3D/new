@@ -8,7 +8,7 @@
         <div class="home__2col">
             <div class="home__2col__left">
                 <div class="home__button-section">
-                    <a class="home__button">
+                    <a class="home__button" onclick="openPage('projects')">
                         <p>Projects</p>
                     </a>
                     <p class="home__button-text">Projects I've worked on, such as games, websites, and more</p>
@@ -20,7 +20,7 @@
                     <p class="home__button-text">All the artwork I've done, sorted from latest to oldest</p>
                 </div>
                 <div class="home__button-section">
-                    <a class="home__button">
+                    <a class="home__button" onclick="openPage('contact')">
                         <p>Contact / Work</p>
                     </a>
                     <p class="home__button-text nobot">Need to contact me, or want some work done? Hit me up!</p>
